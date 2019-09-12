@@ -19,8 +19,8 @@ const StudentSchema = mongoose.Schema({
 
 const Student = module.exports = mongoose.model('Student' , StudentSchema);
 
-module.exports.getAllStudents = function() {
-    Student.find();
+module.exports.getAllStudents = function(callback) {
+    Student.find(callback);
 }
 
 module.exports.addStudent = function(newStudent , callback) {
